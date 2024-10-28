@@ -7,8 +7,8 @@ library(sf)
 # "Aconitum heterophyllum" is an example species
 point_2_alphahull_line <-
   function(csv_path, alpha = 2.5,
-           long = 'Longitude',
-           lat = 'Latitude',
+           long = 'decimalLongitude',
+           lat = 'decimalLatitude',
            crs = 'EPSG:4326',
            point_shp = 'Aconitum heterophyllum.shp',
            hull_shp = 'Aconitum heterophyllum_hull.shp') {
@@ -37,8 +37,8 @@ point_2_alphahull_line <-
 
 point_2_alphahull_curve <-
   function(csv_path,
-           long = 'Longitude',
-           lat = 'Latitude',
+           long = 'decimalLongitude',
+           lat = 'decimalLatitude',
            crs = 'EPSG:4326',
            point_shp = 'Aconitum heterophyllum.shp',
            hull_shp = 'Aconitum heterophyllum_hull.shp') {
@@ -55,5 +55,18 @@ point_2_alphahull_curve <-
                                  partCount = 1,
                                  buff = 200000)
     
-    plot(range[[1]], col = transparentColor('dark green', 0.5), borde
+    plot(range[[1]], col = transparentColor('dark green', 0.5), border = NA)
+    points(data[, c(long, lat)], cex = 0.5, pch = 3)
+    
+    # 导出结果
+    st_write(range[[1]], hull_shp, overwrite = TRUE)
+    # shapefile(range[[1]], hull_shp, overwrite = TRUE)
+  }
+
+
+# main --------------------------------------------------------------------
+csv_path <- "Aconitum heterophyllum_thin1.csv"
+point_2_alphahull_curve(csv_path, 'decimalLongitude', 'decimalLatitude',
+                        hull_shp = 'Aconitum heterophyllum_hull.shp')
+
          
