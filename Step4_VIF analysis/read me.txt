@@ -1,0 +1,14 @@
+
+
+Note:
+
+1. After running “1_VIF_current.R”, you will get the reserved environment variables in the “Current_autocorrelated” folder.
+Remember them, they will be used to crop past and future environment variables.
+
+2. Add the retained environment variables' paths in the “LGM.csv”, “SSP126_2050.csv”, “SSP126_2090.csv”, “SSP585_2050”,
+SSP585_2090.csv”, ‘SSP126_2090.csv’, ‘SSP585_2050’, ‘SSP585_2050’, ‘SSP585_2090.csv’, and ‘SSP585_2090.csv’
+ cropping.
+
+3. In the “LGM.csv” table, keep only the variables related to temperature and precipitation.
+
+4. Run “2_VIF_others.R”.
