@@ -4,6 +4,4 @@ Notice: the environment variables we use to project future and past (LGM) is dif
 in the LGM. For the future, we can use other variables except temperature and precipitation in the current to project to futue (2050, 2090), as 2090 is a short time that many variables
 will not change much between current and fure.
 
-In Step3_generate buffers, you can choose your own environment variables to generate buffers.
-
 My email: liufulv1775@163.com
