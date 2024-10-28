@@ -5,3 +5,5 @@ in the LGM. For the future, we can use other variables except temperature and pr
 will not change much between current and fure.
 
 In Step3_generate buffers, you can choose your own environment variables to generate buffers.
+
+My email: liufulv1775@163.com
